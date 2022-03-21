@@ -13,7 +13,3 @@ else:
      APIkey = https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key} 
 location = 'london'
 
-url = 'http://api.openweathermap.org/data/2.5/weather?q=' + location + '&appid=' + APIkey
-response = requests.get(url)
-weatherData = json.loads(response.text)
-print(weatherData['main']['temp_max'])
