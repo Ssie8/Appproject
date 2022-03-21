@@ -9,7 +9,7 @@ else:
      st.write("You didn't select comedy.")
      
      
- url = 'http://api.openweathermap.org/data/2.5/weather?q=' + location + '&appid=' + APIkey
+ url = 'http://api.openweathermap.org/data/2.5/weather?q=' + location + '&appid=' + 319af15e7367c7b87e592b7c6d84197e
 response = requests.get(url)
 weatherData = json.loads(response.text)
 print(weatherData['main']['temp_max'])
