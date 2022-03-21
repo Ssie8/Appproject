@@ -11,6 +11,6 @@ else:
 import json, requests  
 APIkey = 319af15e7367c7b87e592b7c6d84197e
 location = 'london'
-url = 'http://api.openweathermap.org/data/2.5/weather?q=' + location + '&appid=' + APIkey + 
+url = 'http://api.openweathermap.org/data/2.5/weather?q=' + location + '&appid=' + APIkey + &units=metric
 response = request.get(url)
 weatherData = json.loads(respond.text)
