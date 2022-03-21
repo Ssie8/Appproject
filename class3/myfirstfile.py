@@ -8,7 +8,9 @@ if genre == 'Comedy':
 else:
      st.write("You didn't select comedy.")
      
-     
+import json, requests  
 APIkey = 319af15e7367c7b87e592b7c6d84197e
 location = 'london'
-
+url = 'http://api.openweathermap.org/data/2.5/weather?q=' + location + '&appid=' + APIkey + 
+response = request.get(url)
+weatherData = json.loads(respond.text)
