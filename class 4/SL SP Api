@@ -1,0 +1,7 @@
+keyword=input('plz give me a keyword ')
+url= 'https://api.datamuse.com/words?rel_bga=' + keyword + '&max=10'
+
+dataFromDatamuse = json.loads(response.text)
+pprint(dataFromDatamuse)
+pprint(dataFromDatamuse[0:4]) 
+
