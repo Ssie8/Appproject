@@ -1,0 +1,82 @@
+!pip install googletrans==3.1.0a0    #run first
+
+#wrong: 
+
+from gtts import gTTS
+import IPython.display as ipd  
+from googletrans import Translator
+def Translator()
+ translator = Translator()
+
+text= input('write here the text')
+lang= input('write here a 2 letter language code')
+abc= translator.translate(text)
+
+
+tts1=gTTS(text, lang)
+tts1.save('audiofile.mp3') 
+
+print('the given word is in',abc.str)
+
+
+
+text = input('write here the text you want to translate')
+lang = input ('write here a 2 letter language code')
+
+
+
+
+
+
+#correct
+
+import IPython.display as ipd
+ipd.display(ipd.Audio('english_hello.mp3', autoplay=True))
+
+#correct it instead of en
+
+from gtts import gTTS
+import IPython.display as ipd  
+
+tts1=gTTS(text='hello world', lang='it')
+tts1.save('helloworld_italian.mp3')
+
+ipd.display(ipd.Audio('helloworld_italian.mp3',autoplay=False)) 
+
+
+
+
+#correct2
+
+from gtts import gTTS
+import IPython.display as ipd  
+
+tts1=gTTS(text='Hallo Welt', lang='de')
+tts1.save('german.mp3')
+
+tts2=gTTS(text='ciao a tutti', lang='it')
+tts2.save('italiano.mp3')
+
+tts3=gTTS(text='salam', lang='ur')
+tts3.save('urdu.mp3')
+
+
+print('in Italian:')
+ipd.display(ipd.Audio('italiano.mp3'))
+print('in German:')
+ipd.display(ipd.Audio('german.mp3'))
+print('in Urdu:')
+ipd.display(ipd.Audio('urdu.mp3')) 
+
+#correct3
+
+from gtts import gTTS
+import IPython.display as ipd  
+
+tts1=gTTS(text='hello world', lang='en', tld='co.uk')
+tts1.save('helloworld_british.mp3')
+ipd.display(ipd.Audio('helloworld_british.mp3',autoplay=False))
+
+tts2=gTTS(text='hello world', lang='en', tld='com.au')
+tts2.save('helloworld_australian.mp3')
+ipd.display(ipd.Audio('helloworld_australian.mp3',autoplay=False))
