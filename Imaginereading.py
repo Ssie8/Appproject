@@ -3,7 +3,7 @@ import easyocr
 from PIL import Image
 from numpy import asarray
 
-st.title(‘Read Image’)
+st.title('Read Image')
 reader = easyocr.Reader(['en'])
 uploaded_file = st.file_uploader("Upload Image", type=['jpg', 'jpeg', 'png'])
 
